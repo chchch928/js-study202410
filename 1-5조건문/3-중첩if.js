@@ -1,10 +1,10 @@
 
 let height = +prompt('키가 몇센치입니까?')
+let age = +prompt('나이가 몇살입니까?');
 
 //키가 140이상, 나이가 7살인 경우 놀이기구 탑승여부 출력
 
 if(height >= 140){
-    let age = +prompt('나이가 몇살입니까?');
     if(age>=7){
         alert('놀이기구에 탑승할 수 있습니다.');
     }
