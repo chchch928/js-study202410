@@ -7,7 +7,8 @@ console.log(a == b);
 console.log( a === b );
 console.log(a !== b);
 
-// ===========================
+console.log('===================');
+
 
 // ==은 직관적으로 결과 예측이 어려움
 console.log('0'=='');
@@ -22,7 +23,8 @@ console.log('0' === 0);
 console.log(false === 'false');
 console.log(false === 0);
 
-// ==============================
+console.log('=====================');
+
 
 // 문자비교
 let password ='abc1234';
