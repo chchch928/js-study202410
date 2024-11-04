@@ -7,7 +7,7 @@
 // 10의 약수: 1,2,5,10
 // 해당 수를 1부터 그 수까지 나누었을때 나누어 떨어지는 수
 
-let targetNumber = +prompt('양의정수: ')
+let targetNumber = +prompt('양의 정수: ')
 
 let count = 0;
 let result =''

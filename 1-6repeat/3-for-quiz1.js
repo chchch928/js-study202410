@@ -1,9 +1,12 @@
 
+// 특정 숫자를 입력받고 1부터 해당숫자까지 범위의
+// 2의 제곱수를 가로로 출력
 
+let n = +prompt(`양의 정수를 입력하세요`)
 
-let num1 = +prompt('양의 정수를 입력하세요')
-let result ='';
-for(let i = 2; i<=num1; i*=2){
-  result += `${i}`;
+let resultText ='';
+for (i=2; i<=n; i *=2 ){
+  resultText += `${i}`;
+
 }
-alert(result)
+alert(resultText);
