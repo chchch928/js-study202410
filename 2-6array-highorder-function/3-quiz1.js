@@ -68,7 +68,7 @@ const traders = [
       trader: {
         name: '김철수', 
         city: '대전',
-      },
+      }, 
       year: 2022,
       value: 500000,
     },
@@ -83,9 +83,14 @@ const traders = [
      name: user.trader.name,
      city:user.trader.city
  }))
+  console.log(mappedArray);
 
+// 선생님 답안 
+//  const traderIn2022 = traders
+//   .filter((transaction) => transaction.year === 2022)
+//   .map((transaction) => transaction.trader);
 
- console.log(mappedArray);
+// console.log(traderIn2022);
 
 
 
@@ -116,3 +121,30 @@ console.log(m3);
 
 
 // 연습 5: 서울에 사는 거래자의 모든 거래액의 총합 출력.
+
+const total =traders
+.filter((trs)=> trs.trader.city === '서울')
+.reduce((totalValue,trs)=> totalValue+trs.value,0);
+
+console.log(`총액: ${total}`);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
