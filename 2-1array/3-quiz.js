@@ -11,24 +11,22 @@
    입력했던 숫자배열과 숫자의 총합(배열 요소의 합)을 계산하여 출력하세요.
 */
 
-let numbers =[];
+let numbers = [];
 
-while(true){
-    let num = prompt(`숫자를 입력하세요. \n 그만두려면 '그만'이라고 입력하세요!`)
-    
+while (true) {
+  let num = prompt(`숫자를 입력하세요. \n 그만두려면 '그만'이라고 입력하세요!`);
 
-    if(num === '그만' ){
-        break;
-    }
-    numbers.push(+num);    
-
+  if (num === "그만") {
+    break;
+  }
+  numbers.push(+num);
 }
 
 // 배열 총합 구하기
-let total = 0; 
-for(let n of numbers){
-    total += n;
+let total = 0;
+for (let n of numbers) {
+  total += n;
 }
 
 alert(`입력한 숫자 목록 [${numbers}] 
-    입력한 숫자 총합: ${total}`)
+    입력한 숫자 총합: ${total}`);
