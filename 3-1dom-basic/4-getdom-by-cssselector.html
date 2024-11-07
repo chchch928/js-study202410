@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li class="fruit apple">사과</li>
+        <li class="fruit banana">바나나</li>
+        <li id="gp" class="fruit grape">포도</li>
+        <li class="fruit peach">복숭아</li>
+    </ul>
+    <script>
+        // 포도 li 태그를 가져오고 싶음
+        const $grape = document.querySelector('.grape')
+        // 위와 다 같은 말
+        //const $grape = document.querySelector('ul li:nth-child(3)')
+        //const $grape = document.querySelector('.banana + li')
+        //const $grape = document.querySelector('#gp')
+        
+        $grape.style.color ='violet'
+        
+        // querySelector는 해당 선택자에 일치하는 가장 처음 발견된 
+        // 요소 하나를 가져옴
+        const x = document.querySelectorAll('.fruit')
+        console.log(x);
+        
+        // x[0].style.fontStyle = 'italic'  사과에 이탤릭체
+        // x[2].style.fontStyle = 'italic'  포도에 이탤릭체
+
+        // 반복문을 사용해서 전체를 지정할 수 있음
+        for(const li of x){
+            li.style.fontStyle = 'italic'
+            li.style.border = '1px dashed orange'
+        }
+
+        // li는 배열이 아니라 유사배열(nodelist) 따라서 배열함수는 사용할 수 없음 
+        // 유사배열: 구조는 배열과 유사하나 실제로는 객체에 가까움
+        // 이 유사배열에 유용한 메서드를 사용하려면
+        //유사배열을 실제 배열로 변환해서 사용해야함
+
+       const arraylike = document.querySelectorAll('.fruit');
+       const realarray = [arraylike]
+       
+
+    </script>
+
+</body>
+</html>
