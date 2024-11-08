@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<ul id="fruits">
+    <li class="fr apple">사과</li>
+    <li class="fr banana">바나나</li>
+    <li class="fr grape">포도</li>
+</ul>
+
+<div class="box">
+    <p></p>
+</div>
+
+<script>
+
+    const $ul = document.getElementById('fruits');
+
+    const $listItems = [...$ul.children];
+    console.log($listItems);
+    
+    const $first = $ul.firstElementChild;
+    $first.style.fontSize = '2em'
+
+    const $last = $ul.lastElementChild;
+    $last.style.color = 'violet'
+
+    function hasChild($tag){
+        return $tag.children.length > 0;
+        //return !!$tag.children.length  첫번째 느낌표는 논리로 변환시키고 두번째 느낌표는 논리로 변환했지만 true,false가 바뀐것을 다시 바뀜
+    }
+
+
+    // 특정 태그에 자식이 있는지 여부 확인
+    const $box = document.querySelector('.box')
+    console.log(hasChild($box)); // 자식을 갖고있냐라는 함수를 만들어서 있으면 true출력 없으면 false출력
+    
+
+</script>
+
+</body>
+</html>

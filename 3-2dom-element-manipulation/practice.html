@@ -1,0 +1,28 @@
+
+
+<!-- 남는시간에 더 풀어보기 -->
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="greeting">기존 인사말</p>
+    <div id="description">페이지 설명:</div>
+
+    <script>
+        const greetingElement = document.getElementById('greeting');
+        greetingElement.textContent = '안녕하세요!';
+
+        const descriptionElement = document.getElementById('description');
+        descriptionElement.innerHTML += '**"이 페이지를 즐겨주세요!"**';
+
+
+
+    </script>
+</body>
+</html>
