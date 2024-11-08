@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+          width: 100px;
+          height: 100px;
+          background: orange;
+          font-size: 20px;
+          color: red;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .green {
+          color: greenyellow;
+          background: green;
+        }
+        .blue {
+          color: aqua;
+          background: blue;
+        }
+        .circle {
+          border-radius: 50%;
+        }
+      </style>
+    
+</head>
+<body>
+    <div class="box green" style="font-weight: 700;">Hello</div>
+
+    <script>
+        const $box = document.querySelector('.box')
+        // $box.style.background ='red' 
+        // 점수가 너무 높아서 기존 css가 잡아 먹힐 수 있으므로 사용을 지양
+
+        // 클래스 추가하기
+        $box.classList.add('circle')
+        $box.classList.add('aaa','bbb','ccc') // 여러개 추가가능
+
+        // 클래스 제거하기
+        $box.classList.remove('green');
+        $box.classList.remove('aaa','ccc');
+
+        // 클래스 교체하기(old,new)
+        $box.classList.add('green');
+
+        $box.classList.replace('green','blue') 
+
+        // 클래스 존재 유무 확인
+        console.log($box.classList.contains('circle')); // circle클래스 존재하므로 true
+        console.log($box.classList.contains('rapid')); // rapid 클래스 존재하지 않으므로 false
+
+        // toggle: 해당 클래스가 존재하면 삭제 존재하지 않으면 추가
+        $box.classList.toggle('circle'); // circle이라는 클래스가 존재하므로 삭제
+        $box.classList.toggle('circle'); // circle이라는 클래스가 존재하지 않으므로추가
+        
+
+    </script>
+
+</body>
+</html>
