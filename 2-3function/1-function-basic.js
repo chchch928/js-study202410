@@ -1,4 +1,3 @@
-
 /*
 console.log(`김철수님 안녕하세요!`);
 console.log(`오늘도 즐거운 하루되세요!`);
@@ -19,21 +18,18 @@ console.log(`오늘도 즐거운 하루되세요!`);
 // 함수 정의 (define)
 // 함수는 정의만해서는 실행되지 않는다.
 
-function sayHello(x){
-console.log(`${x}님 안녕하세요!`); 
-console.log(`오늘도 즐거운 하루되세요!`)
+function sayHello(x) {
+  console.log(`${x}님 안녕하세요!`);
+  console.log(`오늘도 즐거운 하루되세요!`);
 }
 
-function makeLine(){
-    console.log('===========================');
-    
+function makeLine() {
+  console.log("===========================");
 }
-
 
 // 함수는 정의한 것을 호출(call)할 때 실행된다
-sayHello('콩콩이');
+sayHello("콩콩이");
 makeLine();
 // 코드 1000줄
 
-
-sayHello('홍길동');
+sayHello("홍길동");

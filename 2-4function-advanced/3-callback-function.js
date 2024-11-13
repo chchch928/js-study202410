@@ -7,11 +7,11 @@ function substract(n1,n2){
     return n1 - n2;
 }
 
-let orange = substract;
-console.log(`orange: ${orange}`);
+let orange = substract; // 함수 자체를 orange에 저장
+console.log(`orange: ${orange}`); // 함수 substract 그 자체가 출력됨
 
-const grape= orange(30,12);
-console.log(`grape: ${grape}`);
+const grape= orange(30,12); // orange가 substract 함수이기 때문에 
+console.log(`grape: ${grape}`); // grape: 8 출력
 
 console.log('===========================');
 
@@ -36,7 +36,7 @@ function bar (n1,n2){
 }
 
 const foo = bar(5,8);
-console.log(typeof foo);
+console.log(typeof foo); //foo는 function이다.
 
 const goo = foo();
 console.log(`goo:${goo}`);

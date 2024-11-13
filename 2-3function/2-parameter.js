@@ -56,4 +56,5 @@ function infiniteHello(){
 
 for (let i =0; i < 10; i++){
     infiniteHello();
-}
+} 
+// hello를 50번 반복함

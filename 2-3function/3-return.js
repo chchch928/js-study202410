@@ -32,7 +32,7 @@ console.log(`r4: ${r4}`); // 문법적으로 문제는 없으나 좋은 코딩�
 
 let arr =[1,2,3,4];
 
-arr.push(5,6,10,20);
+let xx= arr.push(5,6,10,20);
 console.log(`xx:${xx}`);
 
 let yyy =console.log('hello');

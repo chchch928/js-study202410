@@ -1,5 +1,4 @@
 
-// return은 함수를 강제종료하는 구문
 function foo() {
     let a = 10;
     let b = 20;
