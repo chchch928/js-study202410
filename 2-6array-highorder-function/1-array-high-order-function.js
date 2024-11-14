@@ -51,18 +51,18 @@ const userList = [
 
 
 // forEach(): 배열의 반복문을 처리 위에 둘을 합쳐놓은 느낌
-// numbers.forEach(function(n,i){
-//     if(i%2 === 1){
-//     console.log(n);
-//     }
-// })
+numbers.forEach(function(n,i){
+    if(i%2 === 1){
+    console.log(n);
+    }
+});
 
-// numbers.forEach(function(n,i,arr){
-//    console.log(`n:${n}`);
-//    console.log(`i:${i}`);
-//    console.log(arr);
+numbers.forEach(function(n,i,arr){
+   console.log(`n:${n}`);
+   console.log(`i:${i}`);
+   console.log(arr);
    
-// })
+})
 
 // foods.forEach((food,idx)=>{
 //     console.log(`${food} 꿀맛! index:${idx}`);
