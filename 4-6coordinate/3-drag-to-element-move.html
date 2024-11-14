@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>마우스 좌표 기반 위치 이동</title>
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: #007bff;
+      position: absolute;
+      top: 100px;
+      left: 100px;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box" id="box">박스</div>
+
+  <script>
+    const box = document.getElementById('box');
+    let isDragging = false;
+
+    box.addEventListener('mousedown', (event) => { // mousedown 마우스 눌렀을 때 발생
+      isDragging = true;
+    });
+
+    document.addEventListener('mousemove', (e) => { // mousemove 마우스를 움직일 때 발생
+       
+        //clientX,clientY는 마우스 포인터의 좌표
+        // console.log(`x: ${e.clientX}, y: ${e.clientY}`);
+
+        // console.log(`w:${box.offsetWidth},h:${box.offsetHeight}`); // 이해못함
+        
+      if (isDragging) { // 드래그 중인지 확인 isdragging안하면 안눌러도 움직임
+        
+        // 마우스 포인터 정중앙에 박스를 놓기위한 공식
+         box.style.left = `${event.clientX - box.offsetWidth / 2}px`;
+         box.style.top = `${event.clientY - box.offsetHeight / 2}px`;
+
+      }
+    });
+
+    document.addEventListener('mouseup', () => {  //mouseup 마우스를 뗐을 때 발생
+      isDragging = false;
+    });
+  </script>
+
+</body>
+</html>
