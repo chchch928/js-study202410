@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    h1{
+        margin-top: 100px;
+        text-align: center;
+    }
+    .button-box{
+        text-align: center;
+        margin-top: 20px;
+    }
+    #poke-img-box{
+      text-align: center;
+      margin-top: 20px;
+    }
+    .container{
+        border: solid 1px lightgray;
+        width:150px;
+    }
+  
+  </style>
+</head>
+
+<body>
+  <h1>포켓몬 도감</h1>
+
+  <div class="button-box">
+      <button id="prev">이전</button>
+      <button id="next">다음</button>
+  </div>
+  <div id="poke-img-box">
+
+  </div>
+
+
+
+  <script>
+    const $prev = document.getElementById('prev');
+    const $next = document.getElementById('next');
+    const $pokebox = document.getElementById('poke-img-box')
+    
+    let offset = 0;
+
+    $prev.addEventListener('click', e => {
+      offset -= 20;
+      getPokemonById();
+    });
+    $next.addEventListener('click', e => {
+      offset += 20;
+      getPokemonById();
+    });
+
+    // 포켓몬 api 통신
+    function getPokemonById() {
+      const apiUrl = `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=20`
+      fetch(apiUrl)
+        .then(res => res.json())
+        .then(data=>{
+          $pokebox.innerHTML = '';
+          data.results.forEach(pokemon =>{
+            fetch(pokemon.url)
+            .then(res => res.json())
+            .then(pokemonData =>{
+              const imageUrl = data.sprites.front_default;
+              if(imageUrl){
+                const $img = document.createElement('img');
+                $img.src = imageUrl;
+                $img.alt = pokemon.name;
+                $img.classList.add('container')
+                $pokebox.appendChild($img)
+              }
+              else{
+                console.log('이미지를 찾을수 없습니다.');
+                
+              }
+
+            });
+
+          });
+        });
+        
+    }
+    getPokemonById();
+    
+  </script>
+</body>
+</html>
