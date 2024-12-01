@@ -33,9 +33,11 @@
     const $ul = document.getElementById('fruits');
     const $grape = $ul.lastElementChild;
 
+    // ul을 클릭했을 때 console창에 'ul의 클릭이벤트 발생' 출력
     $ul.addEventListener('click',e =>{
         console.log('ul의 클릭이벤트 발생');
     })
+    // class가 grape인 li를 클릭했을 때 console창에 'li.grape의 클릭이벤트 발생' 
     $grape.addEventListener('click',e =>{
         console.log('li.grape의 클릭이벤트 발생');
         
